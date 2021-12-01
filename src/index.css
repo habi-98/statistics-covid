@@ -5,7 +5,130 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #EDF7FF;
+  color: #242632;
+
 }
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  margin: 66px 0 40px;
+}
+
+.content {
+  display: flex;
+  align-items: self-start;
+}
+
+.select-country {
+  width: 360px;
+  padding: 17px 25px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.statistics-list {
+  width: 70%;
+  margin-right: 20px;
+}
+
+.statistics-list {
+  margin-bottom: 20px;
+}
+
+.statistics-element {
+  display: flex;
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 18px 19px 20px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.statistics-element__top, .statistics-element__bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.statistics-element__bottom--ml {
+  margin-left: 29px;
+}
+.statistics-element__date {
+  width: 50%;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+}
+.statistics-element__info {
+  width: 50%;
+}
+
+.statistics-element__box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.statistics-element__box:first-child {
+  margin-bottom: 20px;
+}
+.statistics-element__box--ml {
+  margin-left: 29px;
+}
+
+.statistics-element__label {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.statistics-element__value {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 21px;
+  background: #EDF7FF;
+  padding: 10px;
+}
+.top-recovered-cases {
+  width: 30%;
+  padding: 40px 30px 20px;
+  background: #1BBC9B;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.top-recovered-cases__title{
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+.top-recovered-cases__total {
+  color: #fff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 117px;
+  border-bottom: 0.5px solid #fff;
+  padding: 96px 0;
+}
+
+.top-recovered-cases__date {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #FFFFFF;
+  margin-top: 10px;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
