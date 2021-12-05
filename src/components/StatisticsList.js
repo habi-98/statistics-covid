@@ -15,9 +15,17 @@ function StatisticsList() {
         const minDate = new Date(timestampMin * 1000)
         maxDate.setHours(0,0,0,0)
         minDate.setHours(0,0,0,0)
-        fetch(`https://api.covid19api.com/dayone/country/${selectedCountry}?from=${minDate.toISOString()}&to=${maxDate.toISOString()}`)
+        fetch(`https://api.covid19api.com/dayone/country/${selectedCountry}`)
             .then(res => res.json())
-            .then(result => dispatch(setStatisticsList(result)))
+            .then(result => {
+                const maxDate = Math.round(new Date(Date.now()).getTime() / 1000)
+                const minDate = (maxDate - 432000)
+                const newArr = result.filter(el => {
+                    const d = Math.round(new Date(el.Date).getTime() / 1000)
+                    return d > minDate
+                })
+                dispatch(setStatisticsList(newArr))
+            })
     }
 
     return (
